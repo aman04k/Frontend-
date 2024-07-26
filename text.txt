@@ -1,0 +1,30 @@
+full stack = >
+1. Frontend developer => HTML, CSS, JavaScript, React js, Rootstrap
+ 
+2. Backend developer => Node js, Express js
+
+3. Database => Mongo DB, SQL
+
+Q. Different b/w tags, element and Attributes
+
+  <h1> Hello World</h1>
+
+  tags => heading tags(h1)
+          paragrafh tage(p)
+          images tag(img)
+
+   element =>   <h1> Hello World </h1> compelete tag is called element. 
+
+   Attributes =>   <h1 herf=""> Hello World </h1> 
+
+
+   List => 
+   1. order List <ol></ol>
+   2. unorder list <ul></ul>
+
+   DIV AND SPAN=>
+
+
+   CCS=>
+
+   
