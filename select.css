@@ -1,0 +1,28 @@
+
+.hi{
+    font-size: 30px;
+}
+
+
+ul {
+    margin-top: 100px;
+    background-color: chartreuse;
+    border: 2px solid red;
+    height: 150px ;
+    width: 150px;
+    /* box-shadow: 10px 10px 8px; */
+}
+
+.sadow{
+    background-color: brown;
+    height: 170px;
+    width: 170px;
+    border: 2px solid black;
+    box-shadow: 10px 8px 5px ; 
+   
+}
+.h3{
+    /* text-shadow: 10p; */
+    text-shadow: 2px 2px 2px red; 
+    
+}

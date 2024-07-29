@@ -25,6 +25,43 @@ Q. Different b/w tags, element and Attributes
    DIV AND SPAN=>
 
 
-   CCS=>
+   CCS=> 
+   there are three type of a CSS
+   1. Inline CSS
+   2. Internal CSS
+   3. External CSS
+
+   margin => 12px 12px
+   1. margin-top
+   2. margin-left
+   3. margin-bottom 
+   4. margin-right
+
+   margin= 12px, 12px, 13px, 14px
+
+
+   Padding=> space b/w two element.
+   there are four type of padding 
+   1. padding-top
+   2. padding-left
+   3. padding-bottom
+   4. padding-right 
+
+  sadow...
+  
+   padding=> 12px,52px, 45px, 12px
+
+ position 
+  1 . static 
+  2 . relative 
+  3 . fixed 
+  4 . absolute 
+   5 . sticky 
 
    
+
+   Display => 
+   1.flex
+  2. Inline
+  3. Inline-block
+   4. Inline-flex
