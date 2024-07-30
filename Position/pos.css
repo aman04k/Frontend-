@@ -6,12 +6,15 @@
     position:static;
     top: 30px;
     left: 50px;
+    display: inline-block; /* Ensure the element can rotate */
+            transition: transform 0.5s; /* Add transition for smooth rotation */
 
 }
-.position:hover{
+.position:hover {
     background-color: brown;
-   /* width: 300px; */
-   border-radius: 50%;
-   margin-left: 100px;
-
+    /* width: 300px; */
+    border-radius: 50%;
+    margin-left: 100px;
+    transform: rotate(90deg);
 }
+

@@ -65,3 +65,7 @@ Q. Different b/w tags, element and Attributes
   2. Inline
   3. Inline-block
    4. Inline-flex
+
+   Animation=> 
+
+   media query => make a reponsive website

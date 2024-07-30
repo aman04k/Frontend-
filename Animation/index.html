@@ -1,0 +1,128 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .container{
+            background-color: yellowgreen;
+
+        }
+        .box{
+            background-color: green;
+            border: 6px solid red;
+            width: 250px;
+            height: 250px;
+            animation-name: aman;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            animation-fill-mode: alternate;
+            /* animation-delay: 2s; */
+            /* animation-timing-function: ease-in; */
+            /* animation-delay: 2s; */
+            /* animation-direction: reverse; */
+        }
+        /* @keyframes aman{
+            from{
+                width: 200px;
+                border-radius: 50%;
+                background-color: blueviolet;
+            }
+            to{
+                width: 600px;
+                background-color: cadetblue;
+                background-image: url("https://th.bing.com/th/id/OIP.BkssHlKdD_jXFU2D4QMq4QHaEK?rs=1&pid=ImgDetMain");
+            }
+        } */
+
+        @keyframes aman{
+            0%{
+                top: 0px;
+
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            75%{
+                top: 250px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 250px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            animation
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .container {
+            background-color: yellowgreen;
+            position: relative; /* Added */
+            width: 500px; /* Optional: to limit the movement of the box */
+            height: 500px; /* Optional: to limit the movement of the box */
+        }
+        .box {
+            background-color: green;
+            border: 6px solid red;
+            width: 250px;
+            height: 250px;
+            position: absolute; /* Added */
+            animation-name: aman;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            animation-fill-mode: alternate;
+            /* animation-delay: 2s; */
+            /* animation-timing-function: ease-in; */
+            /* animation-delay: 2s; */
+            /* animation-direction: reverse; */
+        }
+        @keyframes aman {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+            25% {
+                top: 250px;
+                left: 0px;
+                background-image: url("https://th.bing.com/th/id/OIP.BkssHlKdD_jXFU2D4QMq4QHaEK?rs=1&pid=ImgDetMain");
+            }
+            75% {
+                top: 250px;
+                left: 250px;
+                border-radius: 50%;
+            
+            }
+            100% {
+                top: 0px;
+                left: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            animation
+        </div>
+    </div>
+</body>
+</html>
