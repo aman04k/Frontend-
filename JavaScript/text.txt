@@ -1,0 +1,31 @@
+
+datatype => 2 type 
+1. Primitive datatype=> string, number, boolean
+2.Object ya no Primitive datatype=>array , object , function
+
+conditional Statement => if, if else, else , else if, switch..
+
+if(number<0){
+
+}
+
+loop => 
+
+13. Write a program in C++ to calculate the series (1) + (1+2) + (1+2+3) + (1+2+3+4) + ... + (1+2+3+4+...+n).
+Sample Output:
+Input the value for nth term: 5
+1 = 1
+1+2 = 3
+1+2+3 = 6
+1+2+3+4 = 10
+1+2+3+4+5 = 15
+
+
+DOm => Document object model
+1. Document.getElementById()
+2. Document.getElementByClassName()
+3. Document.getElementByTagName()
+4. Document.querySelector()
+
+event => onclick
+click

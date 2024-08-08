@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Oprator</h2>
+
+    <script>
+
+        let number = [1, 2, 3, 4, 5]
+        let start = 0
+        let end = number.length - 1
+        while (start < end) {
+            let map = number[start]
+            number[start] = number[end]
+            number[end] = map
+            start++
+            end--
+        }
+        console.log(number)
+
+    </script>
+</body>
+
+</html>

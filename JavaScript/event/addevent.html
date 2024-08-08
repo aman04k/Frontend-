@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript addEventListener()</h2>
+
+    <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+    <button id="myBtn">click here</button>
+
+    <h1 id="demo"></h1>
+    <!-- <div class="box"></div> -->
+
+    <script>
+        let x = document.getElementById("myBtn")
+        x.addEventListener("mouseover", displayDate);
+        x.addEventListener("click", om)
+
+        function om() {
+            document.getElementById("demo").innerHTML += "Welcome to Jaipur <br> <br>";
+        }
+        
+
+        function displayDate() {
+            document.getElementById("demo").innerHTML += Date() ;
+
+        }
+       
+    </script>
+
+</body>
+
+</html>

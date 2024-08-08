@@ -18,10 +18,20 @@
 
 // console.log(c)
 
-let a = "hariom"
+// let a = "hariom"
 
-{
-    let a = "om yadav"
-    // console.log(a)
-}
-console.log(a)
+// {
+//     let a = "om yadav"
+//     // console.log(a)
+// }
+// console.log(a)
+
+
+// console.log(a.length)
+
+
+// let a = "aman";
+// let b = "prajapati";
+// let c = `${a} is ad ${b}`;
+// console.log(c);
+

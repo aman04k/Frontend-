@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="mouse"></h2>
+    <h1 id="demo"></h1>
+    <div id="change"></div>
+    <button onclick="document.getElementById('demo').textContent = new Date().toLocaleString()">click here</button>
+    <button onmouseover="document.getElementById('mouse').textContent = 'Hello, world!'">over</button>
+    <button onclick="document.getElementById('change').textContent = 'welcome to Jaipur 2024'">click me</button>
+    <br><br>
+
+
+
+    Name: <input type="text" id="fname" placeholder="enter your name" onchange="myfunction()"> 
+    <!-- <button onclick="myfunction()">click me</button> -->
+    <script>
+        function myfunction() {
+           alert('submit onclick')
+        }
+    </script>
+</body>
+</html>

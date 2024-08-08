@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example</title>
+</head>
+<body>
+    <button id="myButton">Click Me!</button>
+    <p id="message"></p>
+
+    <script>
+        // Get the button element by its ID
+        const button = document.getElementById('myButton');
+
+        // Define a function to handle the click event
+        function handleClick() {
+            // Change the text content of the paragraph
+            document.getElementById('message').textContent = 'Button was clicked!';
+        }
+
+        // Add an event listener to the button that listens for a 'click' event
+        button.addEventListener('click', handleClick);
+    </script>
+</body>
+</html>
