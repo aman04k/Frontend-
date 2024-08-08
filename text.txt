@@ -1,5 +1,5 @@
 full stack = >
-1. Frontend developer => HTML, CSS, JavaScript, React js, Rootstrap
+1. Frontend developer => HTML, CSS, JavaScript, React js, Rootstrap,Tailwind
  
 2. Backend developer => Node js, Express js
 
