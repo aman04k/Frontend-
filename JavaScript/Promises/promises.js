@@ -13,10 +13,22 @@
 
 // 2nd METHOD TO PROMISES
 
-let p = new Promise((resolve, reject) => {
+
+// let p = new Promise((resolve, reject) => {
+//     console.log("promises is panding")
+//   setTimeout(() => {
+//     console.log("i am promises and i am fullfilled");
+//     resolve(true);
+//   }, 5000);
+// });
+
+
+let om  = new Promise((resolve, reject) => {
     console.log("promises is panding")
   setTimeout(() => {
     console.log("i am promises and i am fullfilled");
     resolve(true);
+    // reject(new Error("I am an error"));
   }, 5000);
 });
+console.log(om)

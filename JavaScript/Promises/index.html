@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Hello</h1>
+    <h1> Hello Promises</h1>
 
     <script>
         let p1 = new Promise((resolve, reject) => {
@@ -19,7 +19,7 @@
                 // reject(new Error("I am an error"));
             }, 5000);
         });
-
+        
         let p2 = new Promise((resolve, reject) => {
             console.log("Promise is pending");
             setTimeout(() => {
@@ -28,8 +28,8 @@
                 reject(new Error("I am an error"));
             }, 5000);
         });
-
-        console.log(p1, p2);
+        console.log(p1,p2);
+        
     </script>
 </body>
 
