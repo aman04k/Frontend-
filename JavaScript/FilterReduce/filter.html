@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h1>Map Method</h1>
+
+   <script>
+       //filter 
+
+       const myarr = [
+               
+               { brand: "Toyota", model: "Corolla", year: 2022, color: "blue", horsepower: 140 },
+               { brand: "Honda", model: "Civic", year: 2021, color: "red", horsepower: 158 },
+               { brand: "Ford", model: "Mustang", year: 2023, color: "black", horsepower: 310 },
+               { brand: "Chevrolet", model: "Camaro", year: 2022, color: "yellow", horsepower: 275 },
+               { brand: "BMW", model: "3 Series", year: 2022, color: "red"},
+   ]
+
+     let data = myarr.filter((car)=>{
+      return car.model
+     })
+     console.log(data)
+
+       
+   </script>
+</body>
+
+</html>

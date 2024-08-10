@@ -69,3 +69,10 @@ Q. Different b/w tags, element and Attributes
    Animation=> 
 
    media query => make a reponsive website
+
+
+   Map = 
+   let om= [1,2,2]
+   let s = om.map((element, index, om)=>{
+   
+   })
