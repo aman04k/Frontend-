@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img {
+            border-radius: 50%;
+            box-shadow: 8px 2px 2px black;
+            width: 200px;
+        }
+        .maindiv {
+            border: black solid 2px;
+            height: 560px;
+            width: 500px;
+            text-align: center;
+            background-color: aqua;
+            box-shadow: 12px 2px 7px 2px black;
+        }
+        .a {
+            color: blue;
+            border-color: aqua;
+            height: 30px;
+            width: 50px;
+        }
+        .name1 {
+            background-color: rgb(230, 180, 119);
+            height: 50px;
+        }
+        .bio1 {
+            background-color: rgb(111, 177, 252);
+            height: 100px;
+        }
+        .as {
+            background-color: rgb(88, 66, 117);
+            height: 40px;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <div class="maindiv">
+            <img src="day3/download.jpeg" alt="img" id="myimg">
+            <h2 class="name1">name-<b id="myusername"></b></h2>
+            <h2 class="bio1">Bio-<b id="Bio"></b></h2>
+            <h2 class="as">followers-<b id="followers"></b></h2>
+            <button class="a" id="mybtn">click</button>
+            <input type="text" placeholder="enter API username" id="myinp">
+        </div>
+    </div>
+
+    <script>
+        const mybtn = document.getElementById("mybtn");
+        mybtn.addEventListener("click", function() {
+            async function apidata() {
+                const username = document.getElementById("myinp").value;
+                try {
+                    const data = await fetch(`https://api.github.com/users/${username}`);
+                    const data1 = await data.json();
+
+                    const myname = document.getElementById("myusername");
+                    const myBio = document.getElementById("Bio");
+                    const myfollowers = document.getElementById("followers");
+                    const myimg = document.getElementById("myimg");
+
+                    myname.innerHTML = data1.name;
+                    myBio.innerHTML = data1.bio;
+                    myfollowers.innerHTML = data1.followers;
+                    myimg.src = data1.avatar_url;
+                } catch (error) {
+                    console.error("Error fetching data:", error);
+                    alert("Failed to fetch data. Please check the username and try again.");
+                }
+            }
+            apidata();
+        });
+    </script>
+</body>
+</html>

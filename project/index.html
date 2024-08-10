@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Game</title>
+    <style>
+        #world {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .cell {
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+        }
+
+        .wall {
+            background-image: url('./assets/wall.png');
+        }
+
+        .coin {
+            background-image: url('./assets/coin.png');
+        }
+
+        .ground {
+            background-image: url('./assets/bg.png');
+        }
+
+        .ghost {
+            background-image: url('./assets/ghost2.png');
+        }
+
+        .pacman {
+            background-image: url('./assets/pacman.png');
+        }
+
+        .wall {
+            background-image: url('./assets/wall.png');
+        }
+
+        .coin {
+            background-image: url('./assets/coin.png');
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="world"></div>
+
+    <script>
+        const map = [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1],
+            [1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1],
+            [1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1],
+            [1, 2, 2, 2, 1, 1, 5, 1, 1, 2, 2, 2, 1],
+            [1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1],
+            [1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1, 2, 1],
+            [1, 2, 2, 2, 2, 2, 1, 4, 2, 2, 2, 2, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        ];
+
+        let pacman = { x: 6, y: 4 };
+        let gameOver = false;
+
+        const renderMap = () => {
+            const world = document.getElementById('world');
+            world.innerHTML = ''; // Clear the world div
+
+            map.forEach((row, rowIndex) => {
+                const rowDiv = document.createElement('div');
+                rowDiv.className = 'row';
+
+                row.forEach((cell, colIndex) => {
+                    const cellDiv = document.createElement('div');
+                    cellDiv.className = 'cell';
+
+                    if (cell === 1) {
+                        cellDiv.classList.add('wall');
+                    } else if (cell === 2) {
+                        cellDiv.classList.add('coin');
+                    } else if (cell === 3) {
+                        cellDiv.classList.add('ground');
+                    } else if (cell === 4) {
+                        cellDiv.classList.add('ghost');
+                    } else if (cell === 5) {
+                        cellDiv.classList.add('pacman');
+                    }
+
+                    rowDiv.appendChild(cellDiv);
+                });
+
+                world.appendChild(rowDiv);
+            });
+        };
+
+        const handleKeyDown = (event) => {
+            if (gameOver) return;
+
+            map[pacman.y][pacman.x] = 3;
+
+            if (
+                event.keyCode === 37 && pacman.x > 0 && map[pacman.y][pacman.x - 1] !== 1
+            ) {
+                pacman.x -= 1;
+            } else if (
+                event.keyCode === 38 && pacman.y > 0 && map[pacman.y - 1][pacman.x] !== 1
+            ) {
+                pacman.y -= 1;
+            } else if (
+                event.keyCode === 39 && pacman.x < map[0].length - 1 && map[pacman.y][pacman.x + 1] !== 1
+            ) {
+                pacman.x += 1;
+            } else if (
+                event.keyCode === 40 && pacman.y < map.length - 1 && map[pacman.y + 1][pacman.x] !== 1
+            ) {
+                pacman.y += 1;
+            }
+
+            map[pacman.y][pacman.x] = 5;
+            renderMap();
+            checkWinningCondition();
+        };
+
+        const checkWinningCondition = () => {
+            if (!map.some(row => row.includes(2))) {
+                gameOver = true;
+                alert("Congratulations! You collected all the coins. You win!");
+            } else if (!map.some(row => row.includes(4))) {
+                gameOver = true;
+                alert("Game over !! You collided with the ghost");
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        renderMap();
+    </script>
+
+</body>
+
+</html>
