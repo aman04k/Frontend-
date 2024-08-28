@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-8">Clothing Store</h1>
+        <div class="relative w-full max-w-lg mx-auto">
+            <input
+                type="text"
+                id="search-bar"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Search for clothing items..."
+            />
+            <div id="search-results" class="absolute bg-white border border-gray-300 w-full mt-2 rounded-lg shadow-lg z-10"></div>
+        </div>
+        <div id="product-list" class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        </div>
+    </div>
+</body>
+</html>
