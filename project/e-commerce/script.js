@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: 3, name: "Jacket", image: "images/jacket.jpg", price: "$60" },
         { id: 4, name: "Sneakers", image: "images/sneakers.jpg", price: "$50" },
         { id: 5, name: "Cap", image: "images/cap.jpg", price: "$15" },
+        { id: 6, name: "Jacke", image: "images/jacke.jpg", price: "$700" },
         
     ];
 
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const query = searchBar.value.toLowerCase();
         searchResults.innerHTML = "";
 
-        if (query.length > 3) {
+        if (query.length > 2) {
             const filteredProducts = products.filter(product =>
                 product.name.toLowerCase().includes(query)
             );
