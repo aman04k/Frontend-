@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #data{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>hj</h1>
+
+    <div id="data">
+
+
+    </div>
+    <script>
+
+     async function apidata() {
+        let res = await fetch("https://jsonplaceholder.typicode.com/posts")
+        let data = await res.json()
+        
+        let div = document.getElementById("data")
+        data.map(element => {   
+            let p = document.createElement("p")
+            p.innerText = element.title
+            let h1 = document.createElement("h1")
+            h1.innerText = element.body
+            div.append(p)
+        })
+
+        console.log(data)
+     }
+     apidata()
+
+    </script>
+</body>
+</html>
