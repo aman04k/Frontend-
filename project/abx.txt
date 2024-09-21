@@ -1,0 +1,144 @@
+/* Start Landing */
+body{
+    background-color: #00274d;
+    margin: 0;
+    padding: 0;
+}
+.image{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50%;
+}
+
+.kanpur-logo {
+    width: auto; 
+    height: 250px; 
+    transition: transform 1s ease; 
+}
+.kanpur-logo:hover {
+    transform: rotate(360deg) scale(1.1); 
+}
+
+
+.up-logo {
+    max-width: 100%; 
+    height: 100px; 
+    margin-top: 60px; 
+    transition: transform 1s ease; 
+}
+
+/* Rotate and Zoom on Hover */
+.up-logo:hover {
+    transform: rotate(360deg) scale(1.1); 
+}
+
+
+.airc-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: -55px;
+}
+.airc-logo img {
+    max-width: 30%; 
+    height: auto; 
+}
+
+
+
+/* 2nd div  */
+.fields-section{
+    display: flex;
+    justify-content: center;
+    gap: 18%;
+}
+.prize{
+    justify-items: center;
+    align-items: center;
+     margin-top: 70px;   
+}
+.prize h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+}
+.prize .fields-circle{
+    font-size: 1.5rem;
+    font-weight: 700;
+   text-align: center;
+    height: 40px;
+    padding-top: 10px;
+    background-color: #FFFFFF;
+    border: 3px solid #FF6600;
+    border-radius: 10px;
+}
+.fields-text{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:#00274d;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.fields-circle .amount{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FF6600;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/* images */
+.img-logo {
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    border-radius: 50%; 
+    transition: transform 1s ease, box-shadow 1s ease; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.img-logo img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 50%; 
+    transition: transform 2s ease-in-out, box-shadow 1s ease-in-out; 
+    animation: bloom 5s ease-in-out infinite; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Blooming Animation */
+@keyframes bloom {
+    0% {
+        transform: scale(0.8); 
+        opacity: 0.7; 
+    }
+    50% {
+        transform: scale(1.1); 
+        opacity: 1; 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+/* Hover Effect on Container */
+.img-logo:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.6), 0 6px 15px rgba(0, 0, 0, 0.3); 
+}
+
+/* Enhanced Hover Effect on Image */
+.img-logo img:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.6), 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+  
+
+
