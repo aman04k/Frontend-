@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        .color-display { height: 200px; margin: 20px auto; width: 200px; border-radius: 10px; }
+        #colorCode { margin-top: 10px; font-size: 18px; }
+        button { margin: 5px; padding: 10px 15px; cursor: pointer; }
+        ul { list-style: none; padding: 0; }
+        li { margin-top: 10px; }
+        .color-box { width: 50px; height: 50px; display: inline-block; margin-right: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>Color Picker</h2>
+    <div class="color-display" id="colorDisplay"></div>
+    <p id="colorCode">#FFFFFF</p>
+    <button id="newColorBtn">New Color</button>
+    <button id="saveColorBtn">Save Color</button>
+
+    <h3>Saved Colors</h3>
+    <ul id="savedColors"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
